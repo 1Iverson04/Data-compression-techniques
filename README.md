@@ -1,4 +1,4 @@
-                                                   **DATA COMPRESSION TECHNIQUES**
+<h3 style="text-align:center;">**DATA COMPRESSION TECHNIQUES** </h3>
 
 Data compression, source coding, or bit-rate reduction refers to the practice of encoding information with fewer bits than the original representation. Any given compression is either lossy or lossless.\
 **Lossless Compression Techniques**\
