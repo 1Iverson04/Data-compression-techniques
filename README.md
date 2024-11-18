@@ -5,7 +5,7 @@ Data compression, source coding, or bit-rate reduction refers to the practice of
 Lossless data compression algorithms use statistical redundancy to represent data without losing information. This process is reversible.\
 The following are the primary lossless data compression techniques:
 
-I. [**Lempel--Ziv--Welch**](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch "Lempel--Ziv--Welch")
+I. **Lempel--Ziv--Welch**
 
 This is commonly used in GIF graphics, PKZIP programs, and modem hardware. LZW compression works by reading a sequence of symbols, arranging them into strings, and then converting the strings to codes.
 
