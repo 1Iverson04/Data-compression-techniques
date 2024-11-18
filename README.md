@@ -1,11 +1,11 @@
-**DATA COMPRESSION TECHNIQUES**
+                                                   **DATA COMPRESSION TECHNIQUES**
 
 Data compression, source coding, or bit-rate reduction refers to the practice of encoding information with fewer bits than the original representation. Any given compression is either lossy or lossless.\
 **Lossless Compression Techniques**\
 Lossless data compression algorithms use statistical redundancy to represent data without losing information. This process is reversible.\
 The following are the primary lossless data compression techniques:
 
-I. **Lempel--Ziv--Welch**
+I. **Lempel-Ziv-Welch**
 
 This is commonly used in GIF graphics, PKZIP programs, and modem hardware. LZW compression works by reading a sequence of symbols, arranging them into strings, and then converting the strings to codes.
 
