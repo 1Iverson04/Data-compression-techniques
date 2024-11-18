@@ -19,11 +19,11 @@ III. **Run-length encoding (RLE)**
 
 Run-length encoding compresses data by shrinking the physical size of a repeated string of characters. This procedure entails transforming the input data into a compressed format by finding and counting the consecutive occurrences of each character. The steps are as follows.
 
-* Traverse the input data.
+*Traverse the input data.
 
-* Count the number of consecutive repeating characters (run length).
+*Count the number of consecutive repeating characters (run length).
 
-* Store the character and its run length.
+*Store the character and its run length.
 
 IV. **Arithmetic coding**
 
