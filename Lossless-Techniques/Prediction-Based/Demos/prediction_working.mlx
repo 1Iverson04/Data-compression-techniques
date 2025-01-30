@@ -1,0 +1,45 @@
+clear all;
+close all;
+clc;
+
+input_string = 'BANANA$';
+input_integers = [10, 5, 7, 9, 6, 9, 40];
+
+[encoded_string, encoded_integers] = prediction_encode(input_string, input_integers);
+
+[decoded_string, decoded_integers] = prediction_decode(encoded_string, encoded_integers);
+
+
+original_string_bytes = numel(input_string) * 2; 
+original_integer_bytes = numel(input_integers) * 8; 
+
+encoded_string_bytes = numel(encoded_string) * 8; 
+encoded_integer_bytes = numel(encoded_integers) * 8;
+
+compression_ratio_string = original_string_bytes / encoded_string_bytes;
+compression_ratio_integers = original_integer_bytes / encoded_integer_bytes;
+
+disp('Original String:');
+disp(input_string);
+
+disp('Encoded String (ASCII Differences):');
+disp(encoded_string);
+
+disp('Decoded String:');
+disp(decoded_string);
+
+disp('Original Integers:');
+disp(input_integers);
+
+disp('Encoded Integers (Differences):');
+disp(encoded_integers);
+
+disp('Decoded Integers:');
+disp(decoded_integers);
+
+disp('Compression Ratios:');
+disp(['  String: ', num2str(compression_ratio_string), ...
+     ' (Original: ', num2str(original_string_bytes), ' bytes → Encoded: ', num2str(encoded_string_bytes), ' bytes)']);
+
+disp(['  Integers: ', num2str(compression_ratio_integers), ...
+     ' (Original: ', num2str(original_integer_bytes), ' bytes → Encoded: ', num2str(encoded_integer_bytes), ' bytes)']);
