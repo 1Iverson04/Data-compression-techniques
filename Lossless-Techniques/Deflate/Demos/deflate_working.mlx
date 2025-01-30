@@ -1,0 +1,25 @@
+input_string = 'BANANA$';
+window_size = 10;
+
+% Encode the input string
+deflate_output = deflate_encode(input_string, window_size);
+
+% Display the frequency table and compressed data
+disp('Frequency Table:');
+disp(deflate_output.frequency_table);
+disp('Compressed Data:');
+disp(deflate_output.compressed_data);
+
+% Calculate compression ratio
+original_size = length(input_string) * 8; % Original size in bits (8 bits per character)
+compressed_size = length(deflate_output.compressed_data);
+compression_ratio = original_size / compressed_size;
+
+disp(['Original Size: ', num2str(original_size), ' bits']);
+disp(['Compressed Size: ', num2str(compressed_size), ' bits']);
+disp(['Compression Ratio: ', num2str(compression_ratio), ':1']);
+
+% Decode and verify
+decoded_output = deflate_decode(deflate_output, window_size);
+disp(['Original: ', input_string]);
+disp(['Decoded:  ', char(decoded_output)]); % Convert numerical output back to characters
