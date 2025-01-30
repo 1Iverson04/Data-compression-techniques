@@ -1,0 +1,36 @@
+clc;
+clear;
+
+% Define the input data and Golomb parameter
+data = [10, 5, 7, 9, 6, 9, 40];
+m = 4;
+
+% Calculate the original size in bits
+max_data_value = max(data);
+original_size = length(data) * ceil(log2(max_data_value + 1));  % Bits required for the original data
+
+% Encode the data
+encoded_data = golomb_encode(data, m);
+disp('Encoded Data:');
+disp(encoded_data);
+
+% Calculate the compressed size in bits
+compressed_size = length(encoded_data);  % Bits required for the encoded data
+
+% Calculate the compression ratio
+compression_ratio = original_size / compressed_size;
+disp(['Compression Ratio: ', num2str(compression_ratio)]);
+
+% Decode the data
+decoded_data = golomb_decode(encoded_data, m);
+disp('Decoded Data:');
+disp(decoded_data);
+disp('Input Data:');
+disp(data);
+
+% Check if the decoded data matches the original data
+if isequal(decoded_data, data)
+    disp('Success: Decoded data matches the original data.');
+else
+    disp('Error: Decoded data does not match the original data.');
+end
